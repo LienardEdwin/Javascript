@@ -15,21 +15,21 @@ var solution = Math.floor(Math.random() * 100) + 1;
 
 // TODO : complétez le programme
 
-var nombre = Number(prompt("Devinez quel chiffre est tiré au sort ?"));
+var nombre = Number(prompt("Devinez quel chiffre est tiré au sort entre 0 et 100 ?"));
 var tentative = 1; // début de tentative.
 while ((nombre !== solution) && (tentative < 6)) { // Condition pour mettre fin a la boucle.
-	if (nombre < solution) { // Si Le chiffre inséré est trop petit
-		console.log(nombre + " est trop petit.");
-	} else { // Si le chiffre inséré est trop grand
-		console.log(nombre + " est trop grand.");
-	}
-	tentative++; // Le nombre de tentative augmente de 1
-	nombre = Number(prompt("Devinez quel chiffre est tiré au sort ?"));
+    if (nombre < solution) { // Si Le chiffre inséré est trop petit
+        console.log(nombre + " est trop petit.");
+    } else { // Si le chiffre inséré est trop grand
+        console.log(nombre + " est trop grand.");
+    }
+    tentative++; // Le nombre de tentative augmente de 1
+    nombre = Number(prompt("Devinez quel chiffre est tiré au sort ?"));
 }
 if (nombre === solution) { // Si le chiffre inséré est bon.
-	console.log("Bravo la solution était bien le " + solution + "!!");
-	console.log("Vous avez trouvé en " + tentative + " essais");
+    console.log("Bravo la solution était bien le " + solution + "!!");
+    console.log("Vous avez trouvé en " + tentative + " essais");
 } else { // Si le chiffre inséré est mauvais.
-	console.log("Votre dernier essais était le " + nombre)
-	console.log("Vous avez perdu la solution était " + solution);
+    console.log("Votre dernier essais était le " + nombre)
+    console.log("Vous avez perdu la solution était " + solution);
 }
